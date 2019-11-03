@@ -4,17 +4,18 @@
 namespace App\Controller;
 
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
 class MainpageController extends AbstractController
 {
     /**
-     * @return Response
-     * Expected to be the methods that is called to return the main page to the visitor
+     * @Route("/", name="homepage")
      */
     public function panelpage()
     {
+    // Must redirect to /checker
         return new Response('Future main page');
     }
 }

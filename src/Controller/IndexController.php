@@ -16,12 +16,13 @@ class IndexController extends AbstractController
 {
 
     /**
-     * @Route("/")
+     * @Route("/checker", name="integrity_checker")
      * Expected to be the function that checks if the /install folder exists (need to be installed) and if everything
      * works fine
      */
     public function check_state()
     {
+    // Must re redirect to / if everything's good, /install otherwise
         return new Response('Page.');
     }
 }

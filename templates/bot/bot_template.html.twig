@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset('css/bulma/css/bulma.css') }}">
+    <script defer src="{{ asset('css/font-awesome/js/all.js') }}"></script>
+    {#  For inserting stylesheets for the specific page that uses this template  #}
+    {% block stylesheets %}{% endblock %}
+    <title>{% block title %}| Discord Bots Panel{% endblock %}</title>
+</head>
+<header>
+    {#  Implements navbar  #}
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ path('homepage') }}">
+                <img src="https://fr.wikipedia.org/wiki/Discord_(logiciel)#/media/Fichier:Discord.svg" alt="Website's logo">
+            </a>
+        </div>
+    </nav>
+</header>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
