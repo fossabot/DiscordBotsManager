@@ -8,6 +8,9 @@
         <title>{% block title %}| Discord Bots Panel{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
+    <header>
+        {% include ':components:navbar.html.twig' %}
+    </header>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
