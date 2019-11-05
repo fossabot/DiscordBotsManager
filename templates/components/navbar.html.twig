@@ -7,47 +7,50 @@
     <title></title>
 </head>
 <header>
-    {% block navbar %}
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{{ path('homepage') }}">
-                    <img src="https://fr.wikipedia.org/wiki/Discord_(logiciel)#/media/Fichier:Discord.svg"
-                         alt="Website's logo">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ path('homepage') }}">
+                <img src="https://fr.wikipedia.org/wiki/Discord_(logiciel)#/media/Fichier:Discord.svg"
+                     alt="Website's logo">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarContent">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    {% trans %} Bots {% endtrans %}
                 </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                   data-target="navbarBurger">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                <a class="navbar-item">
+                    {% trans %} Help {% endtrans %}
                 </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Github
+                    </a>
+                </div>
             </div>
 
-            <div id="navbarContent">
-                <div class="navbar-start">
-                    <a class="navbar-item">
-                        Bots
-                    </a>
-                    <a class="navbar-item">
-                        Aide
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            Github
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="buttons is-primary">
+                            <strong>{% trans %} Log in {% endtrans %}</strong>
+                        </a>
+                    </div>
+                    <div class="buttons">
+                        <a class="buttons is-primary">
+                            <strong>{% trans %} Register {% endtrans %}</strong>
                         </a>
                     </div>
                 </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="buttons is-primary">
-                                <strong>Se connnecter</strong>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </nav>
-    {% endblock %}
+        </div>
+    </nav>
 </header>
 </html>
