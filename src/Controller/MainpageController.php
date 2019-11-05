@@ -4,9 +4,9 @@
 namespace App\Controller;
 
 
+use App\Entity\InstallationState;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 
 class MainpageController extends AbstractController
 {
@@ -15,7 +15,13 @@ class MainpageController extends AbstractController
      */
     public function panelpage()
     {
-    // Must redirect to /checker
-        return new Response('Future main page');
+    // Must check in database if the configured variable is equal to true
+        $installationState = $this->getDoctrine()
+            ->getRepository(InstallationState::class)
+            ->findOneBy(array('id' => 1));
+        if(!$installationState){
+            return $this->redirectToRoute('installerpage');
+        }
+        return $this->render('::index.html.twig');
     }
 }

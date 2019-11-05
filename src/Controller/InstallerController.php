@@ -10,13 +10,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class InstallerController extends AbstractController
 {
-
     /**
-     * @Route("/install")
+     * @Route("/install", name="installerpage")
      */
     public function installationpage() {
         return new Response('Future installation page');
     }
-
-
 }
