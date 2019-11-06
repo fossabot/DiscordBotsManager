@@ -5,7 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\InstallationState;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainpageController extends AbstractController
