@@ -22,6 +22,6 @@ class MainpageController extends AbstractController
         if(!$installationState){
             return $this->redirectToRoute('installerpage');
         }
-        return $this->render('::index.html.twig');
+        return $this->render('pages/index.html.twig');
     }
 }
