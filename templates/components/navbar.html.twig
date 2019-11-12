@@ -9,43 +9,49 @@
 <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="{{ path('homepage') }}">
-                <img src="https://fr.wikipedia.org/wiki/Discord_(logiciel)#/media/Fichier:Discord.svg"
-                     alt="Website's logo">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="{{ asset('images/Discord-Logo-Black.svg') }}" width="112" height="28" alt="Website's logo">
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-               data-target="navbarBurger">
+
+            <a role="button" id="navbarBurger" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
 
-        <div id="navbarContent">
+        <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
+                <a class="navbar-item">
+                    {% trans %} Home {% endtrans %}
+                </a>
+
                 <a class="navbar-item">
                     {% trans %} Bots {% endtrans %}
                 </a>
-                <a class="navbar-item">
-                    {% trans %} Help {% endtrans %}
-                </a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        Github
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        {% trans %} More {% endtrans %}
                     </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            {% trans %} GitHub {% endtrans %}
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="buttons is-primary">
-                            <strong>{% trans %} Log in {% endtrans %}</strong>
+                        <a class="button is-primary">
+                            <strong>{% trans %} Sign up {% endtrans %}</strong>
                         </a>
-                    </div>
-                    <div class="buttons">
-                        <a class="buttons is-primary">
-                            <strong>{% trans %} Register {% endtrans %}</strong>
+                        <a class="button is-light">
+                            <strong>{% trans %} Sign in {% endtrans %}</strong>
                         </a>
                     </div>
                 </div>
