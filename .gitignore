@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -14,3 +13,9 @@
 ###< symfony/web-server-bundle ###
 
 logs/
+
+Dockerfile
+
+docker-compose.yml
+
+config/vhost.conf
