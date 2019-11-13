@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <title>Discord Bots Panel</title>
-    </head>
-    <header>
-        {% include 'components/navbar.html.twig' %}
-    </header>
-    <body>
-        {% block body %}
-        <p>{% trans %} Hello {% endtrans %}</p>
-        {% endblock %}
-    </body>
-</html>
+{% extends 'pages:base.html.twig' %}
+
+{% block body %}
+    <div id="root"><div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('build/js/app.js') }}"></script>
+{% endblock %}
