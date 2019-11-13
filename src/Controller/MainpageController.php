@@ -13,10 +13,9 @@ class MainpageController extends AbstractController
 {
     /**
      * @Route("/", name="homepage")
-     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function panelpage(Request $request)
+    public function panelpage()
     {
         $installationState = $this->getDoctrine()
             ->getRepository(InstallationState::class)
