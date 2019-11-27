@@ -19,3 +19,5 @@ Dockerfile
 docker-compose.yml
 
 config/vhost.conf
+
+.env
