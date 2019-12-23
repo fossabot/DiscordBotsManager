@@ -3,50 +3,61 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
     <script src="{{ asset('js/BurgerHandler.js') }}"></script>
     <title></title>
 </head>
 <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="{{ path('homepage') }}">
-                <img src="https://fr.wikipedia.org/wiki/Discord_(logiciel)#/media/Fichier:Discord.svg"
-                     alt="Website's logo">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="{{ asset('images/Discord-Logo-Black.svg') }}" width="112" height="28" alt="Website's logo">
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-               data-target="navbarBurger">
+
+            <a role="button" id="navbarBurger" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
 
-        <div id="navbarContent">
+        <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
+                <a class="navbar-item  {% if app.request.attributes.get('_routes') == '' %} is-active {% endif %}">
+                    {% trans %} Home {% endtrans %}
+                </a>
+
+                <a class="navbar-item {% if app.request.attributes.get('_routes') == '' %} is-active {% endif %}">
                     {% trans %} Bots {% endtrans %}
                 </a>
-                <a class="navbar-item">
-                    {% trans %} Help {% endtrans %}
-                </a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        Github
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        {% trans %} More {% endtrans %}
                     </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            <span>{% trans %} GitHub {% endtrans %}</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="buttons is-primary">
-                            <strong>{% trans %} Log in {% endtrans %}</strong>
-                        </a>
-                    </div>
-                    <div class="buttons">
-                        <a class="buttons is-primary">
-                            <strong>{% trans %} Register {% endtrans %}</strong>
-                        </a>
+                        {% if app.request.attributes.get('_routes') == '' %}
+                            <a class="button is-dark">
+                                <strong>{% trans %} Sign up {% endtrans %}</strong>
+                            </a>
+                        {% else %}
+                            <a class="button is-dark">
+                                <strong>{% trans %} Sign in {% endtrans %}</strong>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
