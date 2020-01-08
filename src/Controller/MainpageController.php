@@ -20,9 +20,9 @@ class MainpageController extends AbstractController
         $installationState = $this->getDoctrine()
             ->getRepository(InstallationState::class)
             ->findOneBy(array('id' => 1));
-        if(!$installationState){
+       /* if(!$installationState){
             return $this->redirectToRoute('installerpage');
-        }
+        }*/
         return $this->render('pages/index.html.twig');
     }
 }

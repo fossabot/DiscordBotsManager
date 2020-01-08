@@ -7,7 +7,7 @@
 /vendor/
 .idea
 ###< symfony/framework-bundle ###
-
+/src/Migrations
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
@@ -21,3 +21,4 @@ docker-compose.yml
 config/vhost.conf
 
 .env
+

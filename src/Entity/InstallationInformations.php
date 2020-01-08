@@ -79,7 +79,7 @@ class InstallationInformations
     /**
      * @return string
      */
-    public function getDatabasetype(): string
+    public function getDatabasetype(): ?string
     {
         return $this->databasetype;
     }
@@ -95,7 +95,7 @@ class InstallationInformations
     /**
      * @return string
      */
-    public function getAdress(): string
+    public function getAdress(): ?string
     {
         return $this->adress;
     }
@@ -111,7 +111,7 @@ class InstallationInformations
     /**
      * @return string
      */
-    public function getUsername(): string
+    public function getUsername(): ?string
     {
         return $this->username;
     }
@@ -127,7 +127,7 @@ class InstallationInformations
     /**
      * @return string
      */
-    public function getDatabasename(): string
+    public function getDatabasename(): ?string
     {
         return $this->databasename;
     }
@@ -143,7 +143,7 @@ class InstallationInformations
     /**
      * @return string
      */
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
         return $this->password;
     }
@@ -159,7 +159,7 @@ class InstallationInformations
     /**
      * @return string
      */
-    public function getArguments(): string
+    public function getArguments(): ?string
     {
         return $this->arguments;
     }
