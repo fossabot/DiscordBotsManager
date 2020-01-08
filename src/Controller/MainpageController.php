@@ -5,15 +5,14 @@ namespace App\Controller;
 
 
 use App\Entity\InstallationState;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
 
 class MainpageController extends AbstractController
 {
     /**
      * @Route("/", name="homepage")
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function panelpage()
     {
